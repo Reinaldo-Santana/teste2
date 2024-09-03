@@ -1,9 +1,3 @@
-@media (pointer: coarse) {
-    .header a:hover h2.logo {
-        color: inherit;
-    }
-}
-
 .header nav ul {
     display: flex;
     gap: 10px;

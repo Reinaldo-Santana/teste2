@@ -20,7 +20,7 @@ img {
     max-width: 100%;
 }
 
-a, input {
+a, nav {
     -webkit-tap-highlight-color: transparent;
 }
 

@@ -18,6 +18,12 @@ body {
     font-weight: 400;
 }
 
+@media (pointer: coarse) {
+    .header a:hover h2.logo {
+        color: inherit;
+    }
+}
+
 /* GLOBALS */
 .header,
 .hero,
