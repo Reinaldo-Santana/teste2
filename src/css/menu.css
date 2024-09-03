@@ -61,16 +61,20 @@
 
 .header input:checked ~ label .hamburguer {
     transform: rotate(45deg);
+    background-color: #ff7f50;
 }
 
 .header input:checked ~ label .hamburguer::before {
     transform: rotate(90deg);
     top: 0;
+    background-color: #ff7f50;
 }
 
 .header input:checked ~ label .hamburguer::after {
     transform: rotate(90deg);
     bottom: 0;
+    background-color: #ff7f50;
+
 }
 
 @media (width <= 992px) {
@@ -102,6 +106,9 @@
         padding: 15px;
         margin-block: 4px;
         text-align: center;
+    }
+    .header nav ul li a:active {
+        color: #ff7f50;
     }
     .header nav ul li a:hover {
         border-bottom: 0;
