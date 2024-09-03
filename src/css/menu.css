@@ -107,14 +107,3 @@
         border-bottom: 0;
     }
 }
-
-@media (pointer: coarse) {
-    .header a:hover h2.logo {
-        color: inherit;
-    }
-}
-@media (width <=992px) {
-    .header a:active h2.logo {
-        color: #ff7f50;
-    }
-}
