@@ -59,12 +59,6 @@ body {
     color: #ff7f50;
 }
 
-@media (width <=992px) {
-    .header a:active h2.logo {
-        color: #ff7f50;
-    }
-}
-
 /* HERO */
 .hero {
     grid-area: hero;
@@ -321,11 +315,5 @@ body {
 
     .footer .social .fa-pinterest {
         color: #DF0019;
-    }
-}
-
-@media (pointer: coarse) {
-    .header a:hover h2.logo {
-        color: inherit;
     }
 }
