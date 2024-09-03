@@ -20,8 +20,11 @@ img {
     max-width: 100%;
 }
 
-a, nav {
+a {
     -webkit-tap-highlight-color: transparent;
+}
+nav {
+    -webkit-tap-highlight-color: #ff7f50;
 }
 
 ::-webkit-scrollbar {
