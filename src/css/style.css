@@ -18,20 +18,6 @@ body {
     font-weight: 400;
 }
 
-@media (pointer: coarse) {
-    .header a:hover h2.logo {
-        color: inherit;
-    }
-
-    .about .item .btn-know-more:hover {
-        font-weight: inherit;
-    }
-
-    .footer nav ul li a:hover {
-        border-bottom: inherit;
-    }
-}
-
 /* GLOBALS */
 .header,
 .hero,
@@ -170,11 +156,11 @@ body {
     background: url(../images/sky.jpg) center/cover no-repeat;
 }
 
-@media (width <=992px) {
+/* @media (width <=992px) {
     .about .item .btn-know-more:active {
         font-weight: 700;
     }
-}
+} */
 
 @media (width <=576px) {
     .about {
@@ -317,8 +303,8 @@ body {
 }
 
 @media (width <=992px) {
-    .footer nav ul li a:active {
-        border-bottom: 1px solid #282828;
+    .footer nav ul li a:hover {
+        border-bottom: 0;
     }
 
     .footer .social .fa-facebook-square {

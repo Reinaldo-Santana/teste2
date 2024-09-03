@@ -20,6 +20,10 @@ img {
     max-width: 100%;
 }
 
+a, input {
+    -webkit-tap-highlight-color: transparent;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }
