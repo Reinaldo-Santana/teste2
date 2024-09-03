@@ -99,11 +99,17 @@
 
     .header nav ul li a {
         display: block;
-        padding: 20px;
+        padding: 15px;
         margin-block: 4px;
         text-align: center;
     }
     .header nav ul li a:hover {
         border-bottom: 0;
+    }
+
+    .header nav ul li:last-child a:last-child {
+        border-radius: 50px;
+        background-color: #ff7f50;
+        color: #ffffff;
     }
 }

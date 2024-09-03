@@ -59,6 +59,13 @@ body {
     color: #ff7f50;
 }
 
+@media (width <= 992px) {
+    .header h2.logo {
+        font-size: 2.4rem;
+        color: #ff7f50;
+    }
+}
+
 /* HERO */
 .hero {
     grid-area: hero;
@@ -134,7 +141,8 @@ body {
 }
 
 .about .item .btn-know-more:hover {
-    font-weight: 700;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 .about .image {
@@ -162,24 +170,15 @@ body {
 }
 
 @media (pointer: coarse) {
-    .header a:hover h2.logo {
-        color: inherit;
-    }
-
     .about .item .btn-know-more:hover {
         font-weight: inherit;
+        text-decoration: none;
     }
 }
 @media (width <= 992px) {
-    .header h2.logo {
-        transition: none;
-    }
-    .header a:active h2.logo {
-        color: #ff7f50;
-    }
-
     .about .item .btn-know-more:active {
-        font-weight: 700;
+        font-weight: 500;
+        text-decoration: underline;
     }
 }
 
@@ -314,6 +313,14 @@ body {
 }
 
 @media (width <= 992px) {
+    .footer {
+        background: radial-gradient(circle, rgba(255,127,80,1) 0%, rgba(247,243,241,1) 0%, rgba(240,230,226,1) 44%, rgba(255,127,80,1) 100%);
+    }
+
+    .footer h4 {
+        color: initial;
+    }
+
     .footer nav ul li a:hover {
         border-bottom: 0;
     }
