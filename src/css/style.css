@@ -1,0 +1,339 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding-top: 77px;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "about about about about"
+        "services services services services"
+        "projects projects projects projects"
+        "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+@media (pointer: coarse) {
+    .header a:hover h2.logo {
+        color: inherit;
+    }
+
+    .about .item .btn-know-more:hover {
+        font-weight: inherit;
+    }
+
+    .footer nav ul li a:hover {
+        border-bottom: inherit;
+    }
+}
+
+/* GLOBALS */
+.header,
+.hero,
+.about .item,
+.services .service,
+.footer,
+.footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about,
+.services,
+.projects {
+    display: grid;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    min-height: 75px;
+    padding: 20px 40px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+}
+
+.header h2.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.header a:hover h2.logo {
+    color: #ff7f50;
+}
+
+@media (width <=992px) {
+    .header a:active h2.logo {
+        color: #ff7f50;
+    }
+}
+
+/* HERO */
+.hero {
+    grid-area: hero;
+    height: 87vh;
+    position: relative;
+    background: url('../images/lemons.jpg') center/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.4em);
+        opacity: 0.9;
+    }
+}
+
+.hero::after {
+    height: 35px;
+    position: absolute;
+    content: url('../images/seta_preta.png');
+    bottom: 40px;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@media (width <=576px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero::after {
+        display: none;
+    }
+}
+
+/* SOBRE */
+.about {
+    grid-area: about;
+    max-width: 1920px;
+    margin-inline: auto;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+}
+
+.about .item {
+    padding: 20%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about .item h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.about .item p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.about .item .btn-know-more:hover {
+    font-weight: 700;
+}
+
+.about .image {
+    width: 100%;
+    height: 100%;
+}
+
+.about .image.right {
+    background: url(../images/bridge.jpg) center/cover no-repeat;
+}
+
+.about .image.left {
+    background: url(../images/sky.jpg) center/cover no-repeat;
+}
+
+@media (width <=992px) {
+    .about .item .btn-know-more:active {
+        font-weight: 700;
+    }
+}
+
+@media (width <=576px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .about .image.right {
+        order: 1;
+    }
+}
+
+/* SERVIÇOS */
+.services {
+    grid-area: services;
+    grid-template-columns: 1fr 1fr;
+}
+
+.services .service {
+    padding: 70px 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.services .service h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.services .service p {
+    max-width: 400px;
+    font-size: 2rem;
+    line-height: 25px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.services .service:nth-child(1) {
+    background-color: lightskyblue;
+}
+
+.services .service:nth-child(2) {
+    background-color: lightpink;
+}
+
+@media (width <=576px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROJETOS */
+.projects {
+    grid-area: projects;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project {
+    overflow: hidden;
+}
+
+.projects .project img {
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.projects a:hover img {
+    transform: scale(1.2);
+}
+
+@media (width <=992px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .projects a:hover img {
+        transform: scale(1);
+    }
+}
+
+@media (width <=576px) {
+    .projects {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* RODAPÉ */
+.footer {
+    grid-area: footer;
+    padding-block: 100px;
+    flex-direction: column;
+    background-image: radial-gradient(circle, #ffffff 0%, #8da4a9 100%);
+}
+
+.footer h4 {
+    margin-bottom: 70px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.footer nav {
+    margin-bottom: 50px;
+}
+
+.footer nav ul li a,
+.footer .social a {
+    margin-inline: 20px;
+}
+
+.footer nav ul li a {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.footer nav ul li a:hover {
+    border-bottom: 1px solid #282828;
+}
+
+.footer .social i {
+    font-size: 2rem;
+    transition: 0.3s all;
+}
+
+.footer .social .fa-facebook-square:hover {
+    color: #0863F7
+}
+
+.footer .social .fa-instagram:hover {
+    color: #F71C9E;
+}
+
+.footer .social .fa-twitter-square:hover {
+    color: #00A7E5
+}
+
+.footer .social .fa-pinterest:hover {
+    color: #DF0019;
+}
+
+@media (width <=992px) {
+    .footer nav ul li a:active {
+        border-bottom: 1px solid #282828;
+    }
+
+    .footer .social .fa-facebook-square {
+        color: #0863F7
+    }
+
+    .footer .social .fa-instagram {
+        color: #F71C9E;
+    }
+
+    .footer .social .fa-twitter-square {
+        color: #00A7E5
+    }
+
+    .footer .social .fa-pinterest {
+        color: #DF0019;
+    }
+}
