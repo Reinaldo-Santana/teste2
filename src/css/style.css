@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    padding-top: 77px;
+    padding-top: 75px;
     display: grid;
     grid-template-areas:
         "header header header header"
@@ -187,6 +187,18 @@ footer:target::before {
     background: url(../images/sky.jpg) center/cover no-repeat;
 }
 
+@media (width <= 992px) {
+    .about .item .btn-know-more:hover {
+        text-decoration: none;
+        font-weight: inherit;
+    }
+
+    .about .item .btn-know-more:active {
+        text-decoration: underline;
+        font-weight: 500;
+    }
+}
+
 @media (width <= 576px) {
     .about {
         grid-template-columns: 1fr;
@@ -195,19 +207,6 @@ footer:target::before {
 
     .about .image.right {
         order: 1;
-    }
-}
-
-@media (pointer: coarse) {
-    .about .item .btn-know-more:hover {
-        text-decoration: none;
-        font-weight: inherit;
-    }
-}
-@media (width <= 992px) {
-    .about .item .btn-know-more:active {
-        text-decoration: underline;
-        font-weight: 500;
     }
 }
 
