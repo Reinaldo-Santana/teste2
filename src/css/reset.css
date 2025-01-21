@@ -4,17 +4,13 @@
     border: none;
     box-sizing: border-box;
     outline: none;
-    font-weight: 300;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-ul {
     list-style: none;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-decoration: none;
 }
+
 
 img {
     max-width: 100%;
@@ -23,18 +19,21 @@ img {
 a {
     -webkit-tap-highlight-color: transparent;
 }
+
 nav {
-    -webkit-tap-highlight-color: #ff7f50;
+    -webkit-tap-highlight-color: var(--standard-color);
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 1.2rem;
 }
+
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 1rem;
 }
+
 ::-webkit-scrollbar-thumb {
-    background-color: #ff7f50;
-    border-radius: 10px;
+    background-color: var(--standard-color);
+    border-radius: 1rem;
     border: solid 3px #f1f1f1;
 }
