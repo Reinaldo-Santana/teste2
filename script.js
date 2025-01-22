@@ -129,3 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializa os botões no estado correto
     updateButtons();
 });
+
+
+
+
+// Seleciona os elementos onde o botão direito será desabilitado
+const elements = document.querySelectorAll('.no-right-click');
+
+elements.forEach((element) => {
+    element.addEventListener('contextmenu', (event) => {
+        event.preventDefault(); // Impede o menu de contexto padrão
+    });
+});
