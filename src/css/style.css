@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    scroll-padding-top: 7.5rem;
     scroll-behavior: smooth;
 }
 
@@ -317,7 +318,7 @@ body {
         /* Mostra uma imagem por vez */
     }
 
-    .projects .carousel .carousel-inner .carousel-item:last-child {
+    .projects .carousel .carousel-inner .carousel-item:nth-child(2) {
         order: -1;
     }
 
