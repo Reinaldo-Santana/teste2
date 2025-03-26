@@ -1,21 +1,33 @@
+// Adiciona a classe quando o usuário navega com o teclado
 function handleKeydown(event) {
-    if (event.key === 'Enter') {
-        const activeElement = document.activeElement;
-        if (activeElement) {
-            // Simula o estado :active para o elemento focado
-            activeElement.classList.add('active-state');
-            setTimeout(() => activeElement.classList.remove('active-state'), 150);
-        }
+    if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+    } else if (event.key === 'Enter') {
+        simulateActiveState();
     }
 }
 
-// Adiciona o evento ao elemento
-document.addEventListener('keydown', handleKeydown);
+// Remove a classe quando o usuário usa o mouse
+function handleMouseDown() {
+    document.body.classList.remove('keyboard-navigation');
+}
 
-document.addEventListener('mousedown', () => {
-    // Remove o foco visível ao clicar com o mouse
-    document.querySelectorAll(':focus-visible').forEach((el) => el.blur());
-});
+// Simula o comportamento do :active
+function simulateActiveState() {
+    const activeElement = document.activeElement;
+
+    if (activeElement) {
+        activeElement.classList.add('active-state');
+
+        setTimeout(() => {
+            activeElement.classList.remove('active-state');
+        }, 150);
+    }
+}
+
+// Adiciona os event listeners
+document.addEventListener('keydown', handleKeydown);
+document.addEventListener('mousedown', handleMouseDown);
 
 
 
