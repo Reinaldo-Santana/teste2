@@ -3,8 +3,10 @@ html {
     scroll-behavior: smooth;
 }
 
-section, footer {
-    scroll-margin-top: 75px; /* Ajusta a posição da âncora */
+section,
+footer {
+    scroll-margin-top: 7.5rem;
+    /* Ajusta a posição da âncora */
 }
 
 :root {
@@ -103,8 +105,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero {
@@ -321,7 +330,7 @@ body {
         /* Alinha itens para o carrossel */
         transition: transform 0.5s ease-in-out;
     }
-    
+
     .projects .carousel .carousel-inner .carousel-item {
         flex: 0 0 100%;
         /* Mostra uma imagem por vez */
@@ -381,13 +390,8 @@ body {
     .social {
         margin-bottom: 5rem;
     }
-
-    nav ul li a,
-    .social a {
-        display: inline-block;
-    }
-
-    :is(nav ul li a, .social a):focus-visible {
+    
+    nav ul li a:focus-visible, .social a:focus-visible i {
         transform: translateY(-3px);
     }
 
@@ -400,16 +404,19 @@ body {
                 font-size: 2rem;
                 font-weight: 500;
                 transition: all 0.2s ease-in-out;
-    
+                display: inline-block;
+
+
                 &:is(:hover, :focus-visible) {
                     box-shadow: 0 1px 0 #282828;
                 }
             }
         }
-    } 
+    }
 
     .social a {
         margin-inline: 2rem;
+
         i {
             font-size: 2.2rem;
             transition: 0.3s all;
